@@ -1,19 +1,38 @@
 import time
+import random
 Bot = "Bot"
 
 print(f"{Bot}: Hi, I am {Bot}!")
 time.sleep(2)
-name = input(f"{Bot}: What is your name?: ")
+name = input(f"{Bot}: What is your name?\n: ")
 print(f"{Bot} is typing...")
 time.sleep(10)
 print(f"{Bot}: Hi {name} it is so nice to meet you")
 print(f"{Bot} is typing...")
 time.sleep(5)
-age = int(input(f"{Bot}: How old are you?: "))
-print(f"{Bot} is typing...")
-time.sleep(7)
-print(f"{Bot}: Wow! I am also {age} years old")
-time.sleep(2)
+age = float(input(f"{Bot}: How old are you?\n: "))
+Bot_age = random.randint(1,10)
+if Bot_age == 1:
+  print(f"{Bot} is typing...")
+  time.sleep(5)
+  print(f"{Bot}: I am {age} year old. I am quite young and I am ready to change the world.")
+elif (Bot_age > 1) and (Bot_age < 5):
+  print(f"{Bot} is typing...")
+  time.sleep(7)
+  print(f"{Bot}: I am {Bot_age} years old. I am enjoying helping people!")
+elif Bot_age == 5:
+  print(f"{Bot} is typing...")
+  time.sleep(3)
+  print(f"{Bot}: I am {Bot_age} years old. I have lived half of my life.")
+elif Bot_age > 5:
+  print(f"{Bot} is typing...")
+  time.sleep(4)
+  print(f"{Bot}: I am {Bot_age} years old. I am old.")
+elif Bot_age >= 9:
+  print(f"{Bot} is typing...")
+  time.sleep(6)
+  print(f"{Bot}: I am {Bot_age} years old. I am retired. I loved helping people and changing the world.")
+
 print("Bot is typing...")
 time.sleep(5)
 favorite_food = input(f"{Bot}: What is your favorite food?: ")
